@@ -16,6 +16,6 @@ LipidiR é um pipeline abrangente baseado em R para a análise de dados de lipid
 Para instalar o LipidiR, clone o repositório e execute os seguintes comandos:
 
 ```bash
-git clone https://github.com/yourusername/LipidomicAnalystR.git
+git clone https://github.com/wdartora/LipidomicAnalystR.git
 cd LipidiR
 Rscript install_dependencies.R
