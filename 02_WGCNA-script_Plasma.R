@@ -8,7 +8,7 @@
 rm(list = ls())
 
 #set the folder
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 #Loading the packages
 library(WGCNA)
@@ -63,7 +63,7 @@ sizeGrWindow(12,9)
 par(cex = 0.6);
 par(mar = c(0,4,2,0))
 
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/01-cluster_outlier_Plasma.png",
+png(file="your_location/plots/01-cluster_outlier_Plasma.png",
    width=10, height=10, units="in", res=300)
 #Hierarchical Plot para observar outliers 
 plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="", cex.lab = 1.5, 
@@ -152,7 +152,7 @@ traitColors = numbers2colors(datTraits, signed = FALSE);
 
 
 # Plot the sample dendrogram and the colors underneath.
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/02-dendrogram_and_trait_Plasma.png",
+png(file="your_location/plots/02-dendrogram_and_trait_Plasma.png",
     width=10, height=10, units="in", res=300)
 plotDendroAndColors(sampleTree2, traitColors,
                     groupLabels = names(datTraits), 
