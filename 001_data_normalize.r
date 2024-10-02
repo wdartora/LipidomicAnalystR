@@ -1,12 +1,12 @@
 # Limpar o ambiente
 rm(list = ls())
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/")
+setwd("your_location/data/")
 library(openxlsx)
 library(dplyr)
 
 
 datExprPlasma <-  read.xlsx("data1_Plasma.xlsx", sheet = "plasma.wgcna")
-datExprSerum <- read.xlsx("data2_Serum.xlsx", sheet = "serum.wgcna")
+#datExprSerum <- read.xlsx("data2_Serum.xlsx", sheet = "serum.wgcna")
 
 
 
@@ -22,10 +22,10 @@ normalize_zscore <- function(data) {
 
 # Normalizar os dados
 normalizedPlasma <- normalize_zscore(datExprPlasma)
-normalizedSerum <- normalize_zscore(datExprSerum)
+#normalizedSerum <- normalize_zscore(datExprSerum)
 
 head(normalizedPlasma)
-head(normalizedSerum)
+#head(normalizedSerum)
 # Salvar os dados normalizados em novas planilhas
 write.xlsx(normalizedPlasma, "normalized_Plasma.xlsx")
-write.xlsx(normalizedSerum, "normalized_Serum.xlsx")
+#write.xlsx(normalizedSerum, "normalized_Serum.xlsx")
