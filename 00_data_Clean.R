@@ -28,9 +28,9 @@ library(maplet)
 library(tidyverse)
 
 #purrr::zap()
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 #file_data <- system.file("extdata", "example_data/simulated_data.xlsx", package = "maplet")
-file_data <- 'C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/data_Plasma_RAW_v2.xlsx'
+file_data <- 'your_location/data/data_Plasma_RAW_v2.xlsx'
 
 # STARTING ----------------------------------------------------
 
