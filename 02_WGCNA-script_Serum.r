@@ -8,7 +8,7 @@
 rm(list = ls())
 
 #set the folder
-setwd("your_location/Proj12/data")
+setwd("your_location/data")
 
 #Loading the packages
 library(WGCNA)
