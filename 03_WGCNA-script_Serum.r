@@ -3,7 +3,7 @@ rm(list = ls())
 # Load the WGCNA package
 library(WGCNA)
 library(ggplot2)
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/ADNI_wjd/Proj12/data")
 # Load the data saved in the first part
 lnames = load(file = "03_output_Input_serum.RData")
 
@@ -31,7 +31,7 @@ p<- ggplot(sft$fitIndices, aes(Power, SFT.R.sq, label = Power)) +
   theme_classic()
 
 p
-ggsave("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/03-Topology_plot_Serum.png",
+ggsave("your_location/plots/03-Topology_plot_Serum.png",
        p,  width = 8, height = 8, dpi = 300)
 #(X=Power vs Y=Mean connectivity
 # Plot Mean connectivity as a function of the soft-thresholding power
@@ -42,7 +42,7 @@ d<- ggplot(sft$fitIndices, aes(Power, mean.k., label = Power)) +
   theme_classic()
 d
 
-ggsave("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/04-Mean_connectivity_plot_Serum.png",
+ggsave("your_location/plots/04-Mean_connectivity_plot_Serum.png",
        d,  width = 8, height = 8, dpi = 300)
 
 #=====================================================================================
@@ -102,7 +102,7 @@ table(dynamicColors)
 
 sizeGrWindow(8,6)
 
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/06-dendrogram_moduleColor_Serum.png",
+png(file="your_location/plots/06-dendrogram_moduleColor_Serum.png",
     width=10, height=10, units="in", res=300)
 plotDendroAndColors(geneTree, dynamicColors, "Dynamic Tree Cut", dendroLabels = FALSE, 
                     hang = 0.03, addGuide = TRUE, guideHang = 0.05, main = "Lipid dendrogram and module colors - Serum")
@@ -127,7 +127,7 @@ METree = hclust(as.dist(MEDiss), method = "average")
 # Plot the result from Eigen Genes (eigen lipids)
 sizeGrWindow(7, 6)
 
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/07-eigen_cluster_moduleColor2_Serum.png",
+png(file="your_location/plots/07-eigen_cluster_moduleColor2_Serum.png",
     width=10, height=10, units="in", res=300)
 plot(METree, main = "Clustering of module eigensLipids",
      xlab = "", sub = "")
@@ -154,7 +154,7 @@ mergedMEs = merge$newMEs
 
 #=====================================================================================
 sizeGrWindow(12, 9)
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/06-dendrogram_moduleColor_Serumv2.png",
+png(file="your_location/plots/06-dendrogram_moduleColor_Serumv2.png",
     width=10, height=10, units="in", res=300)
 plotDendroAndColors(geneTree, cbind(dynamicColors, mergedColors),
                     c("Dynamic Tree Cut", "Merged dynamic"),
