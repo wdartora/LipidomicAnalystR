@@ -4,7 +4,7 @@ library(dplyr)
 library(tidyr)
 
 # Definir o diretório de trabalho
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 # 1) --------------------------------------------------------------------------------->>>>
 # Carregar os dados
