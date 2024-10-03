@@ -11,7 +11,7 @@ library(dplyr)
 library(reshape2)
 
 # Definir o diretório de trabalho
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 data_clin <- read.csv("data_clin_v2.csv")
 
@@ -46,7 +46,7 @@ mvaresults = mva(d, measure="Area", method="PCA")
 pca_plot <- plot_mva(mvaresults, color_by="DX_text", components = c(1,3))
 pca_plot <- pca_plot + theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("17-PCA_Plasma_DX.png", plot = pca_plot, width = 6, height = 8)
 
 
@@ -56,7 +56,7 @@ two_group <- de_analysis(d, MCI-CN, AD-CN)
 p_volcano<- plot_results_volcano(two_group)
 p_volcano<- p_volcano+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("18-Volcano_LipidiR_Plasma_DX.png", plot = p_volcano, width = 6, height = 8)
 
 # Multi-group comparison
@@ -71,7 +71,7 @@ significant_molecules(factorial_de)
 
 p<- plot_results_volcano(factorial_de)
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("19-Volcano_Sig_DX.png", plot = p, width = 6, height = 8)
 
 
@@ -82,7 +82,7 @@ mvaresults = mva(d, method = "OPLS-DA", group_col = "DX_text", groups=c("CN", "M
 w<-plot_mva(mvaresults, color_by="DX_text")
 w<-w+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("20-PCA_OPLS_DX.png", plot = w, width = 6, height = 8)
 
 
@@ -90,7 +90,7 @@ ggsave("20-PCA_OPLS_DX.png", plot = w, width = 6, height = 8)
 load<- plot_mva_loadings(mvaresults, color_by="Class", top.n=10)
 load<-load+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("21-Loading_DX.png", plot = load, width = 6, height = 8)
 
 
@@ -125,7 +125,7 @@ mvaresults = mva(d_filtered, method = "OPLS", group_col = stage )
 p<-plot_mva(mvaresults)
 p<-p+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("22-Supervised_plot_DX.png", plot = p, width = 6, height = 8)
 
 
@@ -147,7 +147,7 @@ significant_lipidsets(enrich_results)
 p<-plot_enrichment(two_group, significant_lipidsets(enrich_results), annotation="class")
 p<-p+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("23-enrichment_plot_DX.png", plot = p, width = 32, height = 8)
 
 
@@ -156,12 +156,12 @@ p<-plot_trend(two_group)
 p<-p+theme_light()+
     scale_color_manual(values = c("blue", "red"))
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("24-Chain_plot_DX.png", plot = p, width = 12, height = 8)
 
 
 # Carregar a lista de classes de acyls
-acyl_classes <- read.xlsx("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/ACYL_class_list.xlsx")
+acyl_classes <- read.xlsx("your_location/data/ACYL_class_list.xlsx")
 
 # Adicionar acyls ao two_group
 two_group <- merge(two_group, acyl_classes, by = "Class", all.x = TRUE)
@@ -179,7 +179,7 @@ plot_and_save <- function(data, subset_name) {
        scale_fill_gradient2(low = "blue", mid = "gray", high = "red", midpoint = 0, limits = c(-0.5, 0.5), oob = scales::squish)
   
   # Salvar o gráfico
-  setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+  setwd('your_location/plots/')
   ggsave(paste0("24-dClass_Length_chain_ADvsCN_", subset_name, ".png"), plot = p, width = 8, height = 8)
 }
 
@@ -200,7 +200,7 @@ plot_and_save <- function(data, class_name) {
        scale_color_manual(values = c("AD - CN" = "red", "MCI - CN" = "blue"))
   
   # Salvar o gráfico
-  setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/class_acyl_chain/')
+  setwd('your_location/plots/class_acyl_chain/')
   ggsave(paste0("Class_chain_length_chain_", class_name, ".png"), plot = p, width = 8, height = 8)
 }
 
@@ -235,7 +235,7 @@ plot_and_save <- function(data, class_name) {
   p <- p + scale_color_manual(name = "Comparison", values = c("AD - CN" = "red", "MCI - CN" = "blue"))
 
   # Salvar o gráfico
-  setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/class_acyl_chain/sig/')
+  setwd('your_location/plots/class_acyl_chain/sig/')
   ggsave(paste0("Class_chain_sig_", class_name, ".png"), plot = p, width = 8, height = 8)
 }
 
@@ -257,7 +257,7 @@ p<-p+theme_light() +
      scale_fill_gradient2(low = "blue", mid = "gray", high = "red", midpoint = 0, limits = c(-0.5, 0.5), oob = scales::squish)
 
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("25-Class_chain_inf_ADvsCN_DX.png", plot = p, width = 18, height = 24)
 
 
@@ -273,7 +273,7 @@ lipid_info <- data.frame(
 )
 
 # Exportar para um arquivo Excel
-write.xlsx(lipid_info, "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/25_all_lipids_ADvsCN.xlsx")
+write.xlsx(lipid_info, "your_location/results/25_all_lipids_ADvsCN.xlsx")
 
 # Exibir as primeiras linhas do dataframe exportado
 head(lipid_info)
@@ -286,7 +286,7 @@ p<-plot_chain_distribution(B_group, contrast = NULL, measure = "logFC")
 p<-p+theme_light() +
      scale_fill_gradient2(low = "blue", mid = "gray", high = "red", midpoint = 0, limits = c(-0.5, 0.5), oob = scales::squish)
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("25-Class_chain_inf_MCIvsCN_DX.png", plot = p, width = 18, height = 24)
 
 # Extrair informações de todos os lipídios
@@ -301,7 +301,7 @@ lipid_info <- data.frame(
 )
 
 # Exportar para um arquivo Excel
-write.xlsx(lipid_info, "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/25_all_lipids_MCIvsCN.xlsx")
+write.xlsx(lipid_info, "your_location/results/25_all_lipids_MCIvsCN.xlsx")
 
 # Exibir as primeiras linhas do dataframe exportado
 head(lipid_info)
