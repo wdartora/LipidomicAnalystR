@@ -13,7 +13,7 @@ options(stringsAsFactors = FALSE)
 allowWGCNAThreads()
 
 # Definir diretórios e carregar dados de expressão
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/Proj12/data")
 
 # Carregar dados de soro a partir do arquivo Excel
 serum_df <- read.xlsx("Filtered_Data.xlsx", sheet = "wgcna.Serum")
@@ -43,7 +43,7 @@ textMatrix = paste(signif(crossCorr, 2), "\n(", signif(corPvalueStudent(crossCor
 dim(textMatrix) = dim(crossCorr)
 
 # Definir o diretório de saída
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots")
+setwd("your_location/Proj12/plots")
 
 # Plotar o heatmap
 png(file="12-cross_correlation_heatmap_particle.png", width=18, height=48, units="in", res=300)
@@ -74,7 +74,7 @@ options(stringsAsFactors = FALSE)
 allowWGCNAThreads()
 
 # Definir diretórios e carregar dados de expressão
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 # Carregar dados de soro a partir do arquivo Excel
 serum_df <- read.xlsx("Filtered_Data.xlsx", sheet = "wgcna.Serum")
@@ -116,7 +116,7 @@ textMatrix = paste(signif(crossCorr, 2), "\n(", signif(corPvalueStudent(crossCor
 dim(textMatrix) = dim(crossCorr)
 
 # Definir o diretório de saída
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots")
+setwd("your_location/plots")
 
 # Plotar o heatmap
 png(file="13-cross_correlation_heatmap_class.png", width=15, height=12, units="in", res=300)
@@ -147,12 +147,12 @@ options(stringsAsFactors = FALSE)
 allowWGCNAThreads()
 
 # Definir diretórios e carregar dados de expressão
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots")
+setwd("your_location/plots")
 
 # Carregar dados de abundância de lipídios a partir do arquivo Excel
 lipid_abundance_df <- read.xlsx("Lipid_Abundance_in_Cluster_3_Grouped_Serum.xlsx")
 
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 # Carregar dados de plasma a partir de arquivo RData
 load("03_output_Input_plasma.RData")  # Carregar dados de plasma
@@ -201,7 +201,7 @@ if (length(common_RIDs) > 0) {
   dim(textMatrix) <- dim(crossCorr)
   
   # Definir o diretório de saída
-  setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots")
+  setwd("your_location/plots")
   
   # Plotar o heatmap
   png(file = "14-cross_correlation_heatmap.png", width = 15, height = 12, units = "in", res = 300)
