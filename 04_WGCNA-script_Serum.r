@@ -2,7 +2,7 @@
 rm(list = ls())
 # Load the WGCNA package
 library(WGCNA)
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 # Load the expression and trait data saved in the first part
 lnames = load(file = "03_output_Input_serum.RData")
 #Matriz de genes (lipids)[datExpr] + Phenotype data [datTraits]
@@ -34,7 +34,7 @@ dim(textMatrix) = dim(moduleTraitCor)
 
 #setando parametros do grafico
 sizeGrWindow(20,16)
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/08-Heatmap_moduleColor_Serum.png",
+png(file="your_location/plots/08-Heatmap_moduleColor_Serum.png",
     width=18, height=10, units="in", res=300)
 par(mar = c(10, 8, 5, 3))
 
@@ -99,7 +99,7 @@ moduleGenes = moduleColors==module
 
 #> Iremos plotar o genes (lipids) significance VS o modulo membership
 sizeGrWindow(7, 7)
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/09-scatter_brown_TAU_Abeta42_Serum.png",
+png(file="your_location/plots/09-scatter_brown_TAU_Abeta42_Serum.png",
     width=18, height=10, units="in", res=300)
 par(mfrow = c(1,1))
 verboseScatterplot(abs(geneModuleMembership[moduleGenes, column]),
@@ -125,32 +125,32 @@ module_ALL<-names(nomes_df)[moduleColors=="turquoise"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/turquoise_Serum.xlsx")
+           "your_location/results/turquoise_Serum.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="green"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/green_Serum.xlsx")
+           "your_location/results/green_Serum.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="blue"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/blue_Serum.xlsx")
+           "your_location/results/blue_Serum.xlsx")
 
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="black"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/black_Serum.xlsx")
+           "your_location/results/black_Serum.xlsx")
 
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="grey"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/grey_Serum.xlsx")
+           "your_location/results/grey_Serum.xlsx")
 
 
