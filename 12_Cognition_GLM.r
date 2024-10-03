@@ -17,7 +17,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -72,7 +72,7 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_carrier_DX_cat_CN_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
 
 
@@ -92,7 +92,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -147,7 +147,7 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_carrier_DX_cat_MCI_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
 
 
@@ -168,7 +168,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -223,7 +223,7 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_carrier_DX_cat_AD_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
 
 
@@ -248,7 +248,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/Proj12/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -303,7 +303,7 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_non_carrier_DX_cat_CN_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
 
 
@@ -323,7 +323,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -378,7 +378,7 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_non_carrier_DX_cat_MCI_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
 
 
@@ -399,7 +399,7 @@ library(msm)
 library(lmtest)
 
 # Define o diretório de trabalho e carrega os dados
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 lipid_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Plasma')
 phenotype_data <- read.xlsx('Filtered_Data.xlsx', sheet = 'Filtered_Pheno')
 class_data <- read.xlsx('class_plasma.xlsx')
@@ -454,5 +454,5 @@ for (outcome in outcomes) {
   
   # Salva os resultados em um arquivo Excel, com o nome baseado no desfecho analisado
   filename <- paste("GLM_ApoE4_non_carrier_DX_cat_AD_", outcome, "_adj.xlsx", sep = "")
-  write.xlsx(results_df, file.path('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/DX/', filename))
+  write.xlsx(results_df, file.path('your_location/results/DX/', filename))
 }
