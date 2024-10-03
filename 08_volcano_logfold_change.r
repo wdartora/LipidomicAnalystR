@@ -8,7 +8,7 @@ library(dplyr)
 library(ggrepel)
 
 # Caminho dos arquivos
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 # Carregar os dados dos arquivos Excel
 plasma_aa <- read.xlsx("Filtered_Data.xlsx", sheet = "wgcna.Plasma")
@@ -58,7 +58,7 @@ volcano_plot <- ggplot(results, aes(x = log2FC, y = -log10(p_value), fill = fill
         axis.title = element_text(size = 14))
 
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("15-Plasma_volcano_plot1.png", plot = volcano_plot, width = 6, height = 8)
 
 
@@ -73,7 +73,7 @@ library(dplyr)
 library(ggrepel)
 
 # Caminho dos arquivos
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 # Carregar os dados dos arquivos Excel
 plasma_aa <- read.xlsx("Filtered_Data.xlsx", sheet = "wgcna.Plasma")
@@ -134,7 +134,7 @@ volcano_plot <- ggplot(results, aes(x = log2FC, y = -log10(p_value), fill = fill
         axis.title = element_text(size = 14))
 
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("15-Plasma_volcano_DX_ADvsCN.png", plot = volcano_plot, width = 6, height = 8)
 
 
@@ -142,7 +142,7 @@ ggsave("15-Plasma_volcano_DX_ADvsCN.png", plot = volcano_plot, width = 6, height
 #--------------------------------------->>>>
 # Comparision betweem MCI vs AD
 # Caminho dos arquivos
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 # Carregar os dados dos arquivos Excel
 metadata <- read.xlsx("Filtered_Data.xlsx", sheet = "Filtered_Pheno")
@@ -202,7 +202,7 @@ volcano_plot <- ggplot(results, aes(x = log2FC, y = -log10(p_value), fill = fill
         axis.title = element_text(size = 14))
 
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("15-Plasma_volcano_DX_MCIvsCN.png", plot = volcano_plot, width = 6, height = 8)
 
 
