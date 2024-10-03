@@ -11,7 +11,7 @@ library(dplyr)
 library(reshape2)
 
 # Definir o diretório de trabalho
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 # Carregar os dados dos arquivos Excel
 plasma_aa <- read.xlsx("Filtered_Data.xlsx", sheet = "wgcna.Plasma")
