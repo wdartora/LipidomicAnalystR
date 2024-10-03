@@ -48,7 +48,7 @@ for (mod in 1:ncol(geneModuleMembership))
 geneOrder = order(geneInfo0$moduleColor, -abs(geneInfo0$GS.Hippvol))
 geneInfo = geneInfo0[geneOrder, ]
 
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj09/results/')
+setwd('your_location/results/')
 #write the file with the ordered values
 write.csv(geneInfo, file = "geneInfo_04.csv")
 
