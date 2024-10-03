@@ -12,7 +12,7 @@ library(ggrepel)
 library(limma)
 
 # Definir o diretório
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 # Carregar os dados
 df_AA <- read.xlsx("Filtered_Data.xlsx", sheet = 'Filtered_Plasma')
@@ -58,7 +58,7 @@ umap_df <- umap_df %>%
 # Verificar se DX tem NA após o merge
 print(unique(umap_df$DX))
 # Definir o diretório de saída
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 
 
 
