@@ -11,7 +11,7 @@ library(dplyr)
 library(reshape2)
 
 # Definir o diretório de trabalho
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 data_clin <- read.csv("data_clin.csv")
 
@@ -35,7 +35,7 @@ mvaresults = mva(d, measure="Area", method="PCA")
 pca_plot <- plot_mva(mvaresults, color_by="ApoE4", components = c(1,2))
 pca_plot <- pca_plot + theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("17-PCA_Plasma_ApoE4.png", plot = pca_plot, width = 6, height = 8)
 
 
@@ -45,7 +45,7 @@ two_group <- de_analysis(d, MCI-CN, AD-CN)
 p_volcano<- plot_results_volcano(two_group)
 p_volcano<- p_volcano+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("18-Volcano_LipidiR_Plasma_ApoE4.png", plot = p_volcano, width = 6, height = 8)
 
 
@@ -74,7 +74,7 @@ mvaresults = mva(d, measure="Area", method="PCA")
 pca_plot <- plot_mva(mvaresults, color_by="ApoE4", components = c(1,2))
 pca_plot <- pca_plot + theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("17-PCA_Plasma_ApoE4.png", plot = pca_plot, width = 6, height = 8)
 
 
@@ -84,5 +84,5 @@ two_group <- de_analysis(d, Carrier-NonCarrier)
 p_volcano<- plot_results_volcano(two_group)
 p_volcano<- p_volcano+theme_light()
 # Salvar o gráfico
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 ggsave("18-Volcano_LipidiR_Plasma_ApoE4.png", plot = p_volcano, width = 6, height = 8)
