@@ -1,6 +1,6 @@
 # Clear all
 rm(list = ls())
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 library(openxlsx)
 library(Hmisc)
 library(pheatmap)
@@ -41,7 +41,7 @@ cor_matrix[is.na(cor_matrix) | is.nan(cor_matrix) | is.infinite(cor_matrix)] <- 
 mat_cluster_cols <- hclust(dist(cor_matrix))
 
 # Salvar o heatmap em um arquivo PNG
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 png(paste0("16_Plasma_heatmap_Class.png"), width = 8, height = 8, units = "in", res = 500)
 
 # Heatmap
