@@ -2,7 +2,7 @@
 rm(list = ls())
 # Load the WGCNA package
 library(WGCNA)
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 # Load the expression and trait data saved in the first part
 lnames = load(file = "03_output_Input_plasma.RData")
 #Matriz de genes (lipids)[datExpr] + Phenotype data [datTraits]
@@ -34,7 +34,7 @@ dim(textMatrix) = dim(moduleTraitCor)
 
 #setando parametros do grafico
 sizeGrWindow(20,16)
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/08-Heatmap_moduleColor_Plasma.png",
+png(file="your_location/plots/08-Heatmap_moduleColor_Plasma.png",
     width=18, height=10, units="in", res=300)
 par(mar = c(10, 8, 5, 3))
 
@@ -93,7 +93,7 @@ names(GSPvalue) = paste("p.GS.", names(Abeta42_A40_csf), sep="")
 ######________________________________________________________________________________________>>>
 # 3. Intramodular analysis: identifying genes with high GS and MM =========================
 sizeGrWindow(7, 7)
-png(file="C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/09-scatter_grey_Ab42_40_csf_Plasma.png",
+png(file="your_location/plots/09-scatter_grey_Ab42_40_csf_Plasma.png",
     width=18, height=10, units="in", res=300)
 
 par(mfrow = c(1,1))
@@ -160,7 +160,7 @@ blue_ALL<-names(nomes_df)[moduleColors=="blue"]
 blue_ALL<-data.frame(blue_ALL)
 #=====================================================================================
 write.xlsx(blue_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/blue_ALL.xlsx")
+           "your_location/results/blue_ALL.xlsx")
 
 
 
@@ -179,44 +179,44 @@ module_ALL<-names(nomes_df)[moduleColors=="greenyellow"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/greenyellow_Plasma.xlsx")
+           "your_location/results/greenyellow_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="black"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/black_Plasma.xlsx")
+           "your_location/results/black_Plasma.xlsx")
 
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="magenta"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/magenta_Plasma.xlsx")
+           "your_location/results/magenta_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="purple"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/purple_Plasma.xlsx")
+           "your_location/results/purple_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="turquoise"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/turquoise_Plasma.xlsx")
+           "your_location/results/turquoise_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="green"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/green_Plasma.xlsx")
+           "your_location/results/green_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="blue"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/blue_Plasma.xlsx")
+           "your_location/results/blue_Plasma.xlsx")
 #=====================================================================================
 
 #=====================================================================================
@@ -224,26 +224,26 @@ module_ALL<-names(nomes_df)[moduleColors=="red"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/red_Plasma.xlsx")
+           "your_location/results/red_Plasma.xlsx")
 
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="brown"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/brown_Plasma.xlsx")
+           "your_location/results/brown_Plasma.xlsx")
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="pink"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/pink_Plasma.xlsx")
+           "your_location/results/pink_Plasma.xlsx")
 
 #=====================================================================================
 module_ALL<-names(nomes_df)[moduleColors=="grey"]
 module_ALL<-data.frame(module_ALL)
 #=====================================================================================
 write.xlsx(module_ALL, 
-           "C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/results/grey_Plasma.xlsx")
+           "your_location/results/grey_Plasma.xlsx")
 
 
