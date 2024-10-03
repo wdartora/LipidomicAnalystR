@@ -11,7 +11,7 @@ library(dplyr)
 library(reshape2)
 
 # Definir o diretório de trabalho
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/')
+setwd('your_location/data/')
 
 data_clin <- read.csv("data_clin_v2.csv")
 
@@ -31,7 +31,7 @@ if (!all(c("ApoE4_cat", "DX") %in% colnames(colData(d)))) {
 }
 
 # Carregar o arquivo class_plasma.xlsx
-class_plasma <- read.xlsx("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/class_plasma.xlsx")
+class_plasma <- read.xlsx("your_location/data/class_plasma.xlsx")
 
 # Dividir os dados em ApoE4 carriers e non-carriers
 carriers <- d[, colData(d)$ApoE4_cat == 1]
@@ -40,7 +40,7 @@ non_carriers <- d[, colData(d)$ApoE4_cat == 0]
 # Função para realizar as análises específicas e gerar gráficos
 analyze_subset <- function(d, subset_name) {
   # Carregar a lista de classes de acyls
-  acyl_classes <- read.xlsx("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data/ACYL_class_list.xlsx")
+  acyl_classes <- read.xlsx("your_location/data/ACYL_class_list.xlsx")
   
   # Perform univariate analysis
   two_group <- tryCatch(de_analysis(d, MCI-CN, AD-CN), error = function(e) NULL)
@@ -79,7 +79,7 @@ analyze_subset <- function(d, subset_name) {
 
     p <- p + scale_color_manual(name = "Comparison", values = c("AD - CN" = "red", "MCI - CN" = "blue"))
 
-    ggsave(paste0("Class_chain_sig_", subset_name, "_", class_name, ".png"), plot = p, width = 8, height = 8, path = "\\\\Wat-em004jy3\\D\\william\\AAIC_2024\\lipidiR\\sig")
+    ggsave(paste0("Class_chain_sig_", subset_name, "_", class_name, ".png"), plot = p, width = 8, height = 8, path = "\\\your_location\\sig")
   }
 
   # Gerar e salvar gráficos para cada classe
@@ -98,4 +98,4 @@ apoE4_table <- as.data.frame(table(data_clin$ApoE4_cat))
 colnames(apoE4_table) <- c("ApoE4_cat", "Count")
 
 # Salvar a tabela em um arquivo Excel
-write.xlsx(apoE4_table, "\\\\Wat-em004jy3\\D\\william\\AAIC_2024\\lipidiR\\sig\\ApoE4_counts.xlsx")
+write.xlsx(apoE4_table, "\\\your_location\\ApoE4_counts.xlsx")
