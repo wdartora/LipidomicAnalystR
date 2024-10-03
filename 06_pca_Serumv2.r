@@ -11,7 +11,7 @@ library(factoextra)
 library(Seurat)
 
 # Definir o diretório
-setwd("C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/data")
+setwd("your_location/data")
 
 # Carregar os dados
 df_BB <- read.xlsx("Filtered_Data.xlsx", sheet = 'Filtered_Serum')
@@ -58,7 +58,7 @@ umap_df <- umap_df %>%
 print(unique(umap_df$DX))
 
 # Definir o diretório de saída
-setwd('C:/Users/wjd4002/Documents/William/Project/ADNI/ADNI_wjd/Proj12/plots/')
+setwd('your_location/plots/')
 
 # Escolher o número ideal de clusters usando o método do cotovelo com factoextra
 elbow_plot <- fviz_nbclust(data_BB, kmeans, method = "wss") +
