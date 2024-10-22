@@ -1,7 +1,7 @@
 # LipidomicAnalystR (Lipidomics Data Analysis Pipeline)
-
+## A Comprehensive R-Based Pipeline for Lipidomics Data Analysis
 ## Overview
-LipidiR é um pipeline abrangente baseado em R para a análise de dados de lipidômica, projetado para facilitar o estudo de perfis lipídicos e suas associações com desfechos clínicos. A ferramenta permite o processamento eficiente, normalização e análise estatística de grandes conjuntos de dados de lipidômica de fontes biológicas diversas, como plasma e soro.
+LipidomicsAnalystR é um pipeline abrangente baseado em R para a análise de dados de lipidômica, projetado para facilitar o estudo de perfis lipídicos e suas associações com desfechos clínicos. A ferramenta permite o processamento eficiente, normalização e análise estatística de grandes conjuntos de dados de lipidômica de fontes biológicas diversas, como plasma e soro.
 
 ## Features
 - **Normalização de Dados**: Processos automatizados de normalização de dados lipidômicos.
